@@ -27,7 +27,7 @@ function App() {
     <div className="App">
         <h1>Responsive Gallery</h1>
         <Gallery total={10} limit={limit} activeImg={activeImg} setActiveImg={setActiveImg} galleryPage={galleryPage} setGalleryPage={setGalleryPage}/>
-        <Screen limit={limit} activeImg={activeImg} setGalleryPage={setGalleryPage}/>
+        <Screen total={10} limit={limit} activeImg={activeImg}  setActiveImg={setActiveImg} setGalleryPage={setGalleryPage}/>
     </div>
   );
 }

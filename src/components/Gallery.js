@@ -56,14 +56,16 @@ const Gallery = ({total, limit, activeImg, setActiveImg, galleryPage, setGallery
     return (
     <>
     <div className='gallery'>
-    <button onClick={prevGalleryPage} disabled={galleryPage === 0}>
-    <ChevronLeft size={20}/>
+    <button onClick={prevGalleryPage} disabled={galleryPage === 0} tabIndex={0}>
+    <ChevronLeft size={20} color={(galleryPage === 0) ? 'grey' : 'white'}/>
     </button>
     <div className='gallery'>
         {currentThumbnails.map(i => (
             <div key={i} onClick={()=>{ 
                 // console.log(i);
-                setActiveImg(i)}}>
+                setActiveImg(i)}}
+                className={i === activeImg ? `current-active` : ``}
+            >
         <img
           src={`/resources/image${i}.jpeg`} 
           alt={`Pic ${i}`}
@@ -71,8 +73,8 @@ const Gallery = ({total, limit, activeImg, setActiveImg, galleryPage, setGallery
         /></div>
       ))}    
       </div>    
-      <button onClick={nextGalleryPage} disabled={galleryPage >= totalPages - 1}>
-      <ChevronRight  size={20}/>
+      <button onClick={nextGalleryPage} disabled={galleryPage >= totalPages - 1} tabIndex={0}>
+      <ChevronRight  size={20} color={(galleryPage >= totalPages - 1) ? 'grey' : 'white'}/>
       </button>
       
     </div>

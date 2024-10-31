@@ -2,9 +2,24 @@
   margin: 0px;
 }
 
-.App{
-  background-color: black;
+.App {
+  background-color: #1f1f1f;
   color: white;
   text-align: center;
   min-height: 100vh;
+  padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: white;
+  margin: 2rem 0;
+  display: inline-block;
+  padding: 0 20px;
+  border-left: 4px solid #3498db;
+  border-right: 4px solid #3498db;
 }

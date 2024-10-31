@@ -1,11 +1,56 @@
-.screen{
-    text-align: center;
-    margin: 2vh;
+.app-body {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 80vw;
+    justify-content: center;
+    margin: 5vh auto;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.screen img{
+.app-body button {
+    margin: 2vh 0vw;
+    border: none;
+    background: transparent;
+    padding: 2vw;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.app-body button:hover:not(:disabled) {
+    opacity: 1;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+}
+
+.app-body button:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+.screen {
+    text-align: center;
+    margin: 2vh 0vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.screen img {
     width: 60%;
-    object-fit: cover; /* Ensures the image scales within its aspect ratio */   
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.screen img:hover {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: scale(1.02);
 }
 
 /* For portrait-oriented devices or small screens */
@@ -26,5 +71,27 @@
 @media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 4/3) {
     .screen img {
         aspect-ratio: 1 / 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-body {
+        width: 95vw;
+        padding: 10px;
+    }
+    
+    .screen img {
+        width: 80%;
+    }
+
+    .app-body button {
+        padding: 1vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-body button {
+        padding: 3vw;
+        font-size: 2.5rem;
     }
 }

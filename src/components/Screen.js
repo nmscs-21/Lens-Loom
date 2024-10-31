@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
+import {ChevronLeft, ChevronRight } from 'lucide-react'
 import './Screen.css'
 
-const Screen = ({limit, activeImg, setGalleryPage}) => {
+const Screen = ({total, limit, activeImg, setActiveImg, setGalleryPage}) => {
 
 
   useEffect(() => {
@@ -11,12 +12,20 @@ const Screen = ({limit, activeImg, setGalleryPage}) => {
   }, [activeImg, limit, setGalleryPage]);
 
   return (
-    <div className='screen'>
+    <>
+    <div className='app-body'>
+      <button onClick={()=>{setActiveImg((curr)=>curr-1)}} disabled={activeImg === 1} tabIndex={0}>
+      <ChevronLeft size={30}color={(activeImg === 1) ? 'grey' : 'white'}/>
+      </button>
+      <div className='screen'>
         <img
           src={`/resources/image${activeImg}.jpeg`} 
           alt={`Pic ${activeImg}`}
-        />
-    </div>
+        /></div>
+              <button onClick={()=>{setActiveImg((curr)=>curr+1)}} disabled={activeImg === total} tabIndex={0}>
+      <ChevronRight size={30} color={(activeImg === total) ? 'grey' : 'white'}/>
+      </button>
+    </div></>
   )
 }
 
