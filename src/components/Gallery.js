@@ -1,13 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Gallery.css'
 import {ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Gallery = ({total, limit, activeImg, setActiveImg, galleryPage, setGalleryPage}) => {
-
     const imageList = Array.from({ length: total }, (_, i) => i + 1);
     const THUMBNAILS_PER_PAGE = limit;
     // console.log('Thumbnails per page ', limit);
-    
 
     const totalPages = Math.ceil(imageList.length / THUMBNAILS_PER_PAGE);
 
@@ -51,7 +49,28 @@ const Gallery = ({total, limit, activeImg, setActiveImg, galleryPage, setGallery
       setGalleryPage((prev) => Math.max(prev - 1, 0));
       // console.log('Prev page', galleryPage);
     };
-  
+    
+    const handleKeyNav = (event)=>{
+      if(event.key === 'ArrowRight'){
+        if(activeImg !== total){
+          console.log('trying');
+          setActiveImg((curr)=>curr+1);
+        }
+      } else if(event.key === 'ArrowLeft'){
+        if(activeImg !== 1){
+          setActiveImg((curr)=>curr-1);
+        }
+      }
+    }
+
+    const screenRef = useRef(null);
+
+    // Set focus to the `div` when the component mounts, only if the ref is available
+    useEffect(() => {
+      if (screenRef.current) {
+        screenRef.current.focus();
+      }
+    }, []);
 
     return (
     <>
@@ -59,7 +78,12 @@ const Gallery = ({total, limit, activeImg, setActiveImg, galleryPage, setGallery
     <button onClick={prevGalleryPage} disabled={galleryPage === 0} tabIndex={0}>
     <ChevronLeft size={20} color={(galleryPage === 0) ? 'grey' : 'white'}/>
     </button>
-    <div className='gallery'>
+    <div 
+      className='gallery'
+      tabIndex="0"
+      onKeyDown={handleKeyNav}
+      ref={screenRef}
+    >
         {currentThumbnails.map(i => (
             <div key={i} onClick={()=>{ 
                 // console.log(i);
