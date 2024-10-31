@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with **Lens Loom**
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -8,63 +8,49 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the gallery in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The gallery page will automatically reload when you make edits.\
+You may also see lint errors in the console, which can help identify any issues in your code.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.\
+Refer to the [testing guide](https://facebook.github.io/create-react-app/docs/running-tests) for more information on writing and running tests for the gallery.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the gallery for production, optimizing it for performance.\
+The output files will be in the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+During the build process, React will optimize your code by minifying and including hashes in filenames.\
+Your gallery will then be ready for deployment on various platforms.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Learn more in the [deployment section](https://facebook.github.io/create-react-app/docs/deployment).
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Note: this is a one-way operation. Once you `eject`, you cannot undo this action!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you wish to customize the build configurations further, you can run `eject`. This command will copy all configuration files and dependencies, giving you complete control over the setup.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is an advanced option. Only use it if you are confident in customizing webpack, Babel, ESLint, and other dependencies.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For further information on Create React App, visit the [documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To dive deeper into React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Additional Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* **Code Splitting**: Learn more about [code splitting](https://facebook.github.io/create-react-app/docs/code-splitting) to improve gallery performance by splitting bundles.
+* **Bundle Analysis**: Optimize your gallery by [analyzing the bundle size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size).
+* **Progressive Web App (PWA)**: Consider making the gallery a [Progressive Web App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app) for offline use.
+* **Advanced Configuration**: For detailed customization options, refer to the [advanced configuration guide](https://facebook.github.io/create-react-app/docs/advanced-configuration).
+* **Deployment**: Follow the instructions in the [deployment section](https://facebook.github.io/create-react-app/docs/deployment) to publish the gallery online.
 
-### Analyzing the Bundle Size
+### Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you encounter any issues while building, refer to the [troubleshooting guide](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify).
