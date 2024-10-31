@@ -1,6 +1,11 @@
 .gallery{
     display: flex;
+    overflow: hidden;
+    background-color: rgb(106, 100, 100);
     justify-content: center;
+    width: fit-content;
+    max-width: 90vw;
+    margin: auto;
 }
 
 .gallery img{
@@ -8,4 +13,9 @@
     height: 65px;
     padding: 2px;
     margin: 2px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover{
+    transform: scale(1.10);
 }

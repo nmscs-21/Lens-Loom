@@ -1,4 +1,10 @@
+*{
+  margin: 0px;
+}
+
 .App{
   background-color: black;
+  color: white;
+  text-align: center;
   min-height: 100vh;
 }

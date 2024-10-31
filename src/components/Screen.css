@@ -1,8 +1,30 @@
 .screen{
     text-align: center;
+    margin: 2vh;
 }
 
 .screen img{
-    width: 50vw;
-    height: 80vh;
+    width: 60%;
+    object-fit: cover; /* Ensures the image scales within its aspect ratio */   
+}
+
+/* For portrait-oriented devices or small screens */
+@media (max-aspect-ratio: 3/4) {
+    .screen img {
+        aspect-ratio: 3 / 4;
+    }
+}
+
+/* For landscape-oriented devices or wider screens */
+@media (min-aspect-ratio: 16/9) {
+    .screen img {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* For devices with a more square-like aspect ratio */
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 4/3) {
+    .screen img {
+        aspect-ratio: 1 / 1;
+    }
 }
